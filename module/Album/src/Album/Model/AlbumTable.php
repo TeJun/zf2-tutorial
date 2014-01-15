@@ -26,7 +26,7 @@ class AlbumTable
         if (!$row) {
             throw new \Exception("Could not find row $id");
         }
-        reuturn $row;
+        return $row;
     }
 
     public function saveAlbum(Album $album)
@@ -38,13 +38,13 @@ class AlbumTable
 
         $id = (int) $album->id;
         if ($id == 0) {
-            $this->tableGateway->insert($data); 
+            $this->tableGateway->insert($data);
         } else {
-            if ($this->getAlbum($id)) { 
+            if ($this->getAlbum($id)) {
                 $this->tableGateway->update($data, array('id' => $id));
             } else {
                 throw new \Exception('Album id does not exist');
-            } 
+            }
         }
     }
 
