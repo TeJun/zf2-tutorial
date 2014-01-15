@@ -32,3 +32,26 @@ project and you should be ready to go! It should look something like below:
             Allow from all
         </Directory>
     </VirtualHost>
+
+### MySQL Setup
+
+To create a database(zend_framework) and user(zend / zend1234) for this project test.
+
+    mysql -u root -p   //press enter and input mysql root passwd
+    create database zend_framework;
+    use zend_framework;
+    create user 'zend'@'localhost' identified by 'zend1234';
+    grant all on zend_framework.* to 'zend'@'localhost';
+    flush privileges;
+
+Then create table and add some data
+
+    CREATE TABLE album ( id int(11) NOT NULL auto_increment, 
+    artist varchar(100) NOT NULL, title varchar(100) NOT NULL, PRIMARY KEY (id));
+    INSERT INTO album (artist, title)
+    VALUES ('The Military Wives', 'In My Dreams'); INSERT INTO album (artist, title)
+    VALUES ('Adele', '21'); INSERT INTO album (artist, title)
+    VALUES ('Bruce Springsteen', 'Wrecking Ball (Deluxe)'); INSERT INTO album (artist, title)
+    VALUES ('Lana Del Rey', 'Born To Die'); INSERT INTO album (artist, title)
+    VALUES ('Gotye', 'Making Mirrors');
+    exit
