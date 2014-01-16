@@ -24,7 +24,7 @@ return array(
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
-            'tutorial' => array(
+            'application' => array(
                 'type'    => 'Literal',
                 'options' => array(
                     'route'    => '/tutorial',
@@ -50,6 +50,20 @@ return array(
                     ),
                 ),
             ),
+            //add by soar, according Zend Framework 2 tutorials
+            //video url : http://www.youtube.com/playlist?list=PLXRC3l-ZhN3qLyJG26xPpcCu3-0PhrHtI
+            'blogPost' => array(
+                'type'    => 'Segment',
+                'options' => array(
+                    'route'    => '/blog/post[/:postId]',
+                    'defaults' => array(
+                        'controller' => 'Tutorial\Controller\Blog',
+                        'action'     => 'post',
+                        'postId'     => 1,
+                    ),
+                ),
+            ),
+
         ),
     ),
     'service_manager' => array(
@@ -73,7 +87,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Tutorial\Controller\Index' => 'Tutorial\Controller\IndexController'
+            'Tutorial\Controller\Index' => 'Tutorial\Controller\IndexController',
+            'Tutorial\Controller\Blog'  => 'Tutorial\Controller\BlogController'
         ),
     ),
     'view_manager' => array(

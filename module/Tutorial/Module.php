@@ -9,6 +9,8 @@
 
 namespace Tutorial;
 
+use Tutorial\Models\PostIdentityMap;
+
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 
@@ -24,6 +26,21 @@ class Module
     public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
+    }
+
+    public function getServiceConfig()
+    {
+        return array(
+            'invokables' => array(
+                'PostDataMapper' => 'Tutorial\Models\PostDataMapper',
+            ),
+            'factories' => array(
+                'PostIdentityMap' => function ($sm) {
+                    $pim = new PostIdentityMap($sm->get('PostDataMapper'));
+                    return $pim;
+                }
+            )
+        );
     }
 
     public function getAutoloaderConfig()
