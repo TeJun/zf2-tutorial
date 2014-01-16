@@ -1,6 +1,12 @@
 Zend Framework 2 Tutorial Practice
 =======================
 
+Tutorial Video Source
+---------------------
+
+http://www.youtube.com/playlist?list=PLXRC3l-ZhN3qLyJG26xPpcCu3-0PhrHtI
+
+
 
 Web Server Setup
 ----------------
@@ -46,7 +52,7 @@ To create a database(zend_framework) and user(zend / zend1234) for this project 
 
 Then create table and add some data
 
-    CREATE TABLE album ( id int(11) NOT NULL auto_increment, 
+    CREATE TABLE album ( id int(11) NOT NULL auto_increment,
     artist varchar(100) NOT NULL, title varchar(100) NOT NULL, PRIMARY KEY (id));
     INSERT INTO album (artist, title)
     VALUES ('The Military Wives', 'In My Dreams'); INSERT INTO album (artist, title)
