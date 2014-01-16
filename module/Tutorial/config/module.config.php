@@ -55,10 +55,10 @@ return array(
             'blogPost' => array(
                 'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/blog/post[/:postId]',
+                    'route'    => '/post/view[/:postId]',
                     'defaults' => array(
-                        'controller' => 'Tutorial\Controller\Blog',
-                        'action'     => 'post',
+                        'controller' => 'Tutorial\Controller\Post',
+                        'action'     => 'view',
                         'postId'     => 1,
                     ),
                 ),
@@ -88,7 +88,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Tutorial\Controller\Index' => 'Tutorial\Controller\IndexController',
-            'Tutorial\Controller\Blog'  => 'Tutorial\Controller\BlogController'
+            'Tutorial\Controller\Post'  => 'Tutorial\Controller\PostController'
         ),
     ),
     'view_manager' => array(
@@ -99,9 +99,10 @@ return array(
         'exception_template'       => 'error/index',
         'template_map' => array(
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'tutorial/index/index' => __DIR__ . '/../view/tutorial/index/index.phtml',
+            'tutorial/index/index'    => __DIR__ . '/../view/tutorial/index/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'post/widget'             => __DIR__ . '/../view/tutorial/post/widget.phtml',
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
