@@ -4,7 +4,7 @@ namespace Blog\Models\Post;
 
 use Blog\Models;
 
-class Post extends Models\DomainModelAbstract
+class Post extends Models\DomainEntityAbstract
 {
     /**
      * @var string
@@ -34,8 +34,7 @@ class Post extends Models\DomainModelAbstract
      * @return Post
      */
     public function setId($id){
-        //$this->_id = $id;
-        $this->_id;
+        $this->_id = $id;
         return $this;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Blog\Models;
 
-abstract class DomainModelAbstract
+abstract class DomainEntityAbstract
 {
     protected $_id;
 

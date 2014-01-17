@@ -11,8 +11,8 @@ abstract class DataMapperAbstract
      */
     protected $_dbCon;
 
-    public function __construct(Adapter $dbAdapter)
-    {
-        $this->_dbCon = $dbAdapter;
-    }
+//     public function __construct(Adapter $dbAdapter)
+//     {
+//         $this->_dbCon = $dbAdapter;
+//     }
 }
