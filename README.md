@@ -41,6 +41,7 @@ project and you should be ready to go! It should look something like below:
 
 ### MySQL Setup
 
+Setup Database for Album Models.
 To create a database(zend_framework) and user(zend / zend1234) for this project test.
 
     mysql -u root -p   //press enter and input mysql root passwd
