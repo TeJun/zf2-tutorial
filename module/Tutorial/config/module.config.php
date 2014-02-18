@@ -15,7 +15,8 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Tutorial\Controller\Index',
+                        //'controller' => 'Tutorial\Controller\Index', //change to album index
+                        'controller' => 'Album\Controller\album',
                         'action'     => 'index',
                     ),
                 ),
